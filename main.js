@@ -17,7 +17,7 @@ async function renderProducts() {
   // console.log(products);
   let html = '';
   products.forEach(product => {
-    let productHolder = `<div class="column">
+    let productHolder = `<div class="column is-4">
 	<!-- Card -->
 	<div class="columns is-mobile">
 		<div class="column is-one-fifth">
