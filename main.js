@@ -15,6 +15,15 @@ async function getProducts() {
 async function renderProducts() {
   let products = await getProducts();
   console.log(products);
+  let html = '';
+  products.forEach(product => {
+      let productHolder = `<div class="product" id="${product.no}">
+      											<p>${product.no}</p>
+                          	<p>${product.name}</p>
+                      		</div>`;
+      html += productHolder;
+  });
+  productsHolder.innerHTML = html;
 }
 
 renderProducts();
