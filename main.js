@@ -12,9 +12,9 @@ async function getProducts() {
 }
 
 // Do something with the data
-async function renderProducts() {
+async function firstRenderProducts() {
   let products = await getProducts();
-  // console.log(products);
+  console.log(products);
   let html = '';
   products.forEach(product => {
     let productHolder = `<div class="column is-4">
@@ -69,7 +69,61 @@ async function renderProducts() {
 			html += productHolder;
   });
   productsHolder.innerHTML = html;
+
+
+}
+
+// filter products based on tags
+async function filterByTags(filterTag){
+  let products = await getProducts();
+  let filteredProduct = products.filter(product => product.tags == filterTag);
+  console.log(filteredProduct);
+}
+
+filterByTags("white");
+filterByTags("red");
+filterByTags("sparkling");
+
+async function filterByPrice(){
+  let products = await getProducts();
+
+  products.sort(function (x, y) {
+      return x.cost.bottle - y.cost.bottle;
+  });
+console.table(products);
+
+}
+
+filterByPrice();
+// filterByTags("red");
+// filterByTags("sparkling");
+
+function moreDetails(){
+
+}
+
+function shoppingCart(){
+// Add products to shopping cart
+//  
+}
+
+function viewShoppingCart(){
+
+}
+
+function customerDataForm(){
+  
 }
 
 
-renderProducts();
+firstRenderProducts();
+
+
+// Clears the whole DOM list waiting to update it with current content
+function removeAllChildren(parent){
+  while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+// removeAllChildren(productsHolder);
