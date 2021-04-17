@@ -25,7 +25,7 @@ async function renderProducts() {
 				<img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/${product.image}">
 			</figure>
 		</div>
-		<div class="column is-6">
+		<div class="column is-8">
       <h2 class="title">${product.no}</h2>
       <h3 class="subtitle">${product.name}</h3>
       <div class="columns is-mobile">
