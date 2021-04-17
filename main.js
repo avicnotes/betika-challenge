@@ -20,12 +20,12 @@ async function renderProducts() {
     let productHolder = `<div class="column is-4">
 	<!-- Card -->
 	<div class="columns is-mobile">
-		<div class="column is-one-fifth">
+		<div class="column is-4">
 			<figure>
 				<img src="https://storage.googleapis.com/wineshop-assets/wine-bottles/${product.image}">
 			</figure>
 		</div>
-		<div class="column is-four-fifths">
+		<div class="column is-6">
       <h2 class="title">${product.no}</h2>
       <h3 class="subtitle">${product.name}</h3>
       <div class="columns is-mobile">
